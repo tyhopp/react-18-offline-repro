@@ -3,5 +3,5 @@ module.exports = {
     title: `react-18-offline-repro`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [`gatsby-plugin-offline`],
+};
