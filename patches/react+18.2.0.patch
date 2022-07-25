@@ -1,0 +1,100 @@
+diff --git a/node_modules/react/cjs/react-jsx-dev-runtime.development.js b/node_modules/react/cjs/react-jsx-dev-runtime.development.js
+index 3fe63ac..310d3b6 100644
+--- a/node_modules/react/cjs/react-jsx-dev-runtime.development.js
++++ b/node_modules/react/cjs/react-jsx-dev-runtime.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react/cjs/react-jsx-runtime.development.js b/node_modules/react/cjs/react-jsx-runtime.development.js
+index 946a597..ff1366a 100644
+--- a/node_modules/react/cjs/react-jsx-runtime.development.js
++++ b/node_modules/react/cjs/react-jsx-runtime.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react/cjs/react.development.js b/node_modules/react/cjs/react.development.js
+index 304b87e..979efd6 100644
+--- a/node_modules/react/cjs/react.development.js
++++ b/node_modules/react/cjs/react.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 
+           'use strict';
+diff --git a/node_modules/react/cjs/react.shared-subset.development.js b/node_modules/react/cjs/react.shared-subset.development.js
+index c35c837..974f5c1 100644
+--- a/node_modules/react/cjs/react.shared-subset.development.js
++++ b/node_modules/react/cjs/react.shared-subset.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react/index.js b/node_modules/react/index.js
+index 999ead7..ad37442 100644
+--- a/node_modules/react/index.js
++++ b/node_modules/react/index.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   module.exports = require('./cjs/react.production.min.js');
+ } else {
+   module.exports = require('./cjs/react.development.js');
+diff --git a/node_modules/react/jsx-dev-runtime.js b/node_modules/react/jsx-dev-runtime.js
+index 324eb11..c04a8b8 100644
+--- a/node_modules/react/jsx-dev-runtime.js
++++ b/node_modules/react/jsx-dev-runtime.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   module.exports = require('./cjs/react-jsx-dev-runtime.production.min.js');
+ } else {
+   module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
+diff --git a/node_modules/react/jsx-runtime.js b/node_modules/react/jsx-runtime.js
+index 0416df5..e99d3c6 100644
+--- a/node_modules/react/jsx-runtime.js
++++ b/node_modules/react/jsx-runtime.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   module.exports = require('./cjs/react-jsx-runtime.production.min.js');
+ } else {
+   module.exports = require('./cjs/react-jsx-runtime.development.js');
+diff --git a/node_modules/react/react.shared-subset.js b/node_modules/react/react.shared-subset.js
+index 694e966..012ef53 100644
+--- a/node_modules/react/react.shared-subset.js
++++ b/node_modules/react/react.shared-subset.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   module.exports = require('./cjs/react.shared-subset.production.min.js');
+ } else {
+   module.exports = require('./cjs/react.shared-subset.development.js');

@@ -1,0 +1,173 @@
+diff --git a/node_modules/react-dom/cjs/react-dom-server-legacy.browser.development.js b/node_modules/react-dom/cjs/react-dom-server-legacy.browser.development.js
+index 11c25e0..5b0c8ef 100644
+--- a/node_modules/react-dom/cjs/react-dom-server-legacy.browser.development.js
++++ b/node_modules/react-dom/cjs/react-dom-server-legacy.browser.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js b/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
+index b031fac..1715d1a 100644
+--- a/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
++++ b/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react-dom/cjs/react-dom-server.browser.development.js b/node_modules/react-dom/cjs/react-dom-server.browser.development.js
+index 97fb7ea..bef730d 100644
+--- a/node_modules/react-dom/cjs/react-dom-server.browser.development.js
++++ b/node_modules/react-dom/cjs/react-dom-server.browser.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react-dom/cjs/react-dom-server.node.development.js b/node_modules/react-dom/cjs/react-dom-server.node.development.js
+index be9f8df..8480374 100644
+--- a/node_modules/react-dom/cjs/react-dom-server.node.development.js
++++ b/node_modules/react-dom/cjs/react-dom-server.node.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react-dom/cjs/react-dom-test-utils.development.js b/node_modules/react-dom/cjs/react-dom-test-utils.development.js
+index c483a91..5330b9d 100644
+--- a/node_modules/react-dom/cjs/react-dom-test-utils.development.js
++++ b/node_modules/react-dom/cjs/react-dom-test-utils.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 'use strict';
+ 
+diff --git a/node_modules/react-dom/cjs/react-dom.development.js b/node_modules/react-dom/cjs/react-dom.development.js
+index e4ed5ae..0e51ad7 100644
+--- a/node_modules/react-dom/cjs/react-dom.development.js
++++ b/node_modules/react-dom/cjs/react-dom.development.js
+@@ -10,7 +10,7 @@
+ 
+ 'use strict';
+ 
+-if (process.env.NODE_ENV !== "production") {
++if (process.env.REACT_NODE_ENV !== "production") {
+   (function() {
+ 
+           'use strict';
+diff --git a/node_modules/react-dom/client.js b/node_modules/react-dom/client.js
+index 8e61108..64d1b20 100644
+--- a/node_modules/react-dom/client.js
++++ b/node_modules/react-dom/client.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ var m = require('react-dom');
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   exports.createRoot = m.createRoot;
+   exports.hydrateRoot = m.hydrateRoot;
+ } else {
+diff --git a/node_modules/react-dom/index.js b/node_modules/react-dom/index.js
+index 0eb376e..52eae3f 100644
+--- a/node_modules/react-dom/index.js
++++ b/node_modules/react-dom/index.js
+@@ -8,7 +8,7 @@ function checkDCE() {
+   ) {
+     return;
+   }
+-  if (process.env.NODE_ENV !== 'production') {
++  if (process.env.REACT_NODE_ENV !== 'production') {
+     // This branch is unreachable because this function is only called
+     // in production, but the condition is true only in development.
+     // Therefore if the branch is still here, dead code elimination wasn't
+@@ -28,7 +28,7 @@ function checkDCE() {
+   }
+ }
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   // DCE check should happen before ReactDOM bundle executes so that
+   // DevTools can report bad minification during injection.
+   checkDCE();
+diff --git a/node_modules/react-dom/profiling.js b/node_modules/react-dom/profiling.js
+index 91f89f0..783ca59 100644
+--- a/node_modules/react-dom/profiling.js
++++ b/node_modules/react-dom/profiling.js
+@@ -8,7 +8,7 @@ function checkDCE() {
+   ) {
+     return;
+   }
+-  if (process.env.NODE_ENV !== 'production') {
++  if (process.env.REACT_NODE_ENV !== 'production') {
+     // This branch is unreachable because this function is only called
+     // in production, but the condition is true only in development.
+     // Therefore if the branch is still here, dead code elimination wasn't
+@@ -28,7 +28,7 @@ function checkDCE() {
+   }
+ }
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   // DCE check should happen before ReactDOM bundle executes so that
+   // DevTools can report bad minification during injection.
+   checkDCE();
+diff --git a/node_modules/react-dom/server.browser.js b/node_modules/react-dom/server.browser.js
+index 4b7749d..d3e7b99 100644
+--- a/node_modules/react-dom/server.browser.js
++++ b/node_modules/react-dom/server.browser.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ var l, s;
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   l = require('./cjs/react-dom-server-legacy.browser.production.min.js');
+   s = require('./cjs/react-dom-server.browser.production.min.js');
+ } else {
+diff --git a/node_modules/react-dom/server.node.js b/node_modules/react-dom/server.node.js
+index 2eb97e8..f211d3b 100644
+--- a/node_modules/react-dom/server.node.js
++++ b/node_modules/react-dom/server.node.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ var l, s;
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   l = require('./cjs/react-dom-server-legacy.node.production.min.js');
+   s = require('./cjs/react-dom-server.node.production.min.js');
+ } else {
+diff --git a/node_modules/react-dom/test-utils.js b/node_modules/react-dom/test-utils.js
+index bc23ebe..258e60c 100644
+--- a/node_modules/react-dom/test-utils.js
++++ b/node_modules/react-dom/test-utils.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-if (process.env.NODE_ENV === 'production') {
++if (process.env.REACT_NODE_ENV === 'production') {
+   module.exports = require('./cjs/react-dom-test-utils.production.min.js');
+ } else {
+   module.exports = require('./cjs/react-dom-test-utils.development.js');

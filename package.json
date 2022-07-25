@@ -10,9 +10,10 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "REACT_NODE_ENV='development' gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "gatsby": "^4.19.2",
